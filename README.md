@@ -4,11 +4,11 @@ Canvas Editor is a responsive, dynamic page builder built with React and Tailwin
 
 ## Live Demo
 
-View Application: https://your-deployed-link.com
+[View Application](https://canvas-editor-delta.vercel.app/)
 
 ## Repository
 
-GitHub: https://github.com/Navimish/Canvas-Editor
+[GitHub](https://github.com/Navimish/Canvas-Editor)
 
 ## Features
 
@@ -76,7 +76,7 @@ npm run dev
 
 ## Demo Video
 
-Add your demo video link here
+[Watch Demo](https://drive.google.com/file/d/1XTfsV3mpM3Oyju4sbpLCp92YPhz7r3wc/view?usp=sharing)
 
 ## Future Improvements
 
