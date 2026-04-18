@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-// 1. Create a helper to read local storage BEFORE the app loads
+
 const getInitialBlocks = () => {
   const saved = localStorage.getItem('canvasFlow_data');
   // If there is saved data, parse it. If not, return an empty array.
@@ -8,7 +8,7 @@ const getInitialBlocks = () => {
 };
 
 export const useStore = create((set) => ({
-  // 2. Set the initial state to whatever we found in local storage
+  
   canvasBlocks: getInitialBlocks(),
 
   addBlock: (block) => set((state) => ({

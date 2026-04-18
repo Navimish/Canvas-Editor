@@ -1,16 +1,90 @@
-# React + Vite
+# Canvas Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Canvas Editor is a responsive, dynamic page builder built with React and Tailwind CSS. It features a drag-and-drop interface that allows users to construct custom layouts using modular blocks, with inline editing and local storage persistence.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+View Application: https://your-deployed-link.com
 
-## React Compiler
+## Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+GitHub: https://github.com/Navimish/Canvas-Editor
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Drag-and-drop interface for rearranging content blocks
+* Modular elements: Headings, Text, Images, Markdown
+* Inline editing for text updates
+* Image URL editing with overlay interaction
+* Real-time block counter
+* Local storage persistence (auto-save and load)
+* Responsive dark-themed UI
+* Scalable component architecture
+
+## Tech Stack
+
+* Frontend: React (Vite)
+* Styling: Tailwind CSS
+* State Management: Zustand
+* Drag and Drop: @dnd-kit/core, @dnd-kit/sortable, @dnd-kit/utilities
+* Icons: Lucide React
+* Deployment: Vercel or Netlify
+
+## Architecture
+
+* Zustand is used for global state to manage blocks efficiently and avoid prop drilling
+* BlockRenderer follows a factory pattern to render UI from JSON data
+* Drag-and-drop logic is isolated in SortableItem
+* Local storage is initialized inside the store to prevent React Strict Mode issues
+* Each block type is modular and stored separately
+
+## Folder Structure
+
+src/
+├── components/
+│   ├── blocks/
+│   │   ├── HeaderBlock.jsx
+│   │   ├── ImageBlock.jsx
+│   │   ├── MarkdownBlock.jsx
+│   │   └── TextBlock.jsx
+│   ├── BlockRenderer.jsx
+│   ├── Canvas.jsx
+│   ├── Palette.jsx
+│   └── SortableItem.jsx
+├── store/
+│   └── useStore.js
+├── utils/
+│   └── defaultBlocks.js
+├── App.jsx
+├── main.jsx
+└── index.css
+
+## Setup Instructions
+
+1. Clone the repository
+
+git clone https://github.com/Navimish/Canvas-Editor.git
+cd Canvas-Editor
+
+2. Install dependencies
+
+npm install
+
+3. Run development server
+
+npm run dev
+
+## Demo Video
+
+Add your demo video link here
+
+## Future Improvements
+
+* Undo and Redo functionality
+* Export layout to HTML or JSON
+* Additional block types (video, code, columns)
+* Theme customization
+
+## Author
+
+Navneet Mishra
